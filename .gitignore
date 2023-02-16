@@ -64,3 +64,4 @@ functions/*
 !functions/.gitkeep
 
 .idea
+package-lock.json
