@@ -65,3 +65,4 @@ functions/*
 
 .idea
 package-lock.json
+.talismanrc
