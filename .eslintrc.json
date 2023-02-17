@@ -1,0 +1,61 @@
+{
+  "env": {
+    "browser": false,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react/display-name": 0,
+    "react/react-in-jsx-scope": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "object-curly-spacing": [2, "always", { "objectsInObjects": true }], // {} 前后要加空格
+    "array-bracket-spacing": [2,"always"], //     // 使用 === 替代 ==
+    "no-alert": 1, // 不使用alert
+    "no-param-reassign": 2, // 禁止给参数重新赋值
+    "max-params": [2, 5], // 函数的最多参数
+    "prefer-const": 2, // 首选const
+    "quotes": [2, "single"], // 引号使用单引号
+    "indent": [2, 2], // 缩进风格
+    "object-shorthand": 2, // 强制对象字面量缩写语法
+    "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }], // 换行时运算符在行尾还是行首
+    "dot-location": 0,  // 对象访问符的位置，换行的时候在行首还是行尾
+    "keyword-spacing": [2, { "after": true, "before": true } ], // 关键字后面是否要空一格
+    "curly": [2, "all"], // 必须使用 if(){} 中的{}
+    "default-case": 2, // switch语句最后必须有default
+    "no-else-return": 2, //如果if语句里面有return,后面不能跟else语句
+    "no-eval": 1, //禁止使用eval
+    "no-ex-assign": 2, //禁止给catch语句中的异常参数赋值
+    "no-lonely-if": 2, //禁止else语句内只有if语句
+    "no-nested-ternary": 1, //禁止使用嵌套的三目运算
+    "no-new-func": 2, //禁止使用new Function
+    "no-new-object": 2, //禁止使用new Object()
+    "no-new-wrappers": 2, //禁止使用new创建包装实例，new String new Boolean new Number
+    "no-unreachable": 2, //不能有无法执行的代码
+    "no-unused-expressions": 2, //禁止无用的表达式
+    "no-use-before-define": 2, //未定义前不能使用
+    "camelcase": 2,//强制驼峰法命名
+    "space-infix-ops": [2, { "int32Hint": true }], // 操作符前后空格
+    "key-spacing": [2, { "beforeColon": false, "afterColon": true }], // 对象内部key 与冒号前后的空格
+    "arrow-parens": [2, "as-needed"], // 针对函数的参数括号，在可以省略括号的地方强制不使用括号
+    "semi": [2, "always"], // 语句结束必须要加分号
+    "max-len": [2, {"code": 140}], // 限制一行代码的字符数量是140
+    "no-console": 1
+  },
+  "ignorePatterns": ["node_modules/**", "build/**", "coverage/**", "public/**"]
+}
